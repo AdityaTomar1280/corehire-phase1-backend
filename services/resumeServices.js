@@ -928,7 +928,7 @@ async function extractTextFromBuffer(fileObject) {
 // as they operate on text strings, not file paths or buffers.
 
 async function summarizeResume(resumeText) {
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
   try {
     // ... (rest of your summarizeResume logic)
     console.log("Generating resume summary...");
@@ -945,7 +945,7 @@ async function summarizeResume(resumeText) {
 }
 
 async function compareResumeToJobDescription(resumeText, jobDescription) {
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
   // ... (rest of your extensive compareResumeToJobDescription prompt and logic)
   const prompt = `
 You are an AI assistant specialized in analyzing resumes and comparing them to job descriptions.
