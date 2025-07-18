@@ -169,7 +169,7 @@ exports.requestPasswordReset = async (req, res, next) => {
     const token = jwt.sign({ id: user._id, email: user.email }, secret, {
       expiresIn: "1h",
     });
-    const resetURL = `https://corehire-p1.cfapps.ap11.hana.ondemand.com/resetpassword?id=${user._id}&token=${token}`;
+    const resetURL = `https://corehire-phase1.vercel.app/resetpassword?id=${user._id}&token=${token}`;
     // const resetURL = `http://localhost:3000/resetpassword?id=${user._id}&token=${token}`;
 
     await sendEmail(
